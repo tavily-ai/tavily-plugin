@@ -22,16 +22,16 @@ Add to your Claude Code settings (`~/.claude/settings.json`):
 
 ```bash
 # Add the Tavily marketplace
-claude plugin marketplace add tavily-ai/tavily-cookbook
+claude plugin marketplace add tavily-ai/tavily-plugin
 
 # Install the plugin
-claude plugin install tavily
+claude plugin install tavily@tavily-plugins
 ```
 
 ### Option 2: Direct Install
 
 ```bash
-claude plugin install github:tavily-ai/tavily-cookbook/tavily
+claude plugin install github:tavily-ai/tavily-plugin
 ```
 
 ## Skills
@@ -47,6 +47,7 @@ The plugin includes three agent skills that Claude can use automatically:
 ## Links
 
 - [Tavily Documentation](https://docs.tavily.com)
+- [Tavily Plugin Repository](https://github.com/tavily-ai/tavily-plugin)
 - [Tavily Cookbook](https://github.com/tavily-ai/tavily-cookbook)
 - [Get API Key](https://tavily.com)
 

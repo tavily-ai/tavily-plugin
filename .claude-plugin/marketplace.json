@@ -1,24 +1,29 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "tavily-plugin",
-  "description": "Official Tavily plugin for Claude Code - web search, research, and crawling capabilities",
+  "name": "tavily-plugins",
   "owner": {
-    "name": "tavily",
+    "name": "Tavily",
     "email": "dean.sacoransky@tavily.com"
+  },
+  "metadata": {
+    "description": "Official Tavily plugin for Claude Code - web search, research, and crawling capabilities",
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "tavily",
+      "source": "./",
       "description": "Build AI applications with real-time web data using Tavily's search, extract, crawl, and research APIs.",
       "version": "1.0.0",
       "author": {
         "name": "Tavily Team",
         "email": "dean.sacoransky@tavily.com"
       },
-      "source": "./tavily",
-      "homepage": "https://docs.tavily.com",
-      "category": "development",
-      "tags": ["web-search", "rag", "agents", "research", "crawl"]
+      "homepage": "https://github.com/tavily-ai/tavily-plugin",
+      "repository": "https://github.com/tavily-ai/tavily-plugin",
+      "license": "MIT",
+      "keywords": ["search", "web-search", "rag", "agents", "llm", "research", "crawl", "extract"],
+      "category": "external-integrations",
+      "tags": ["web-search", "data-retrieval", "agents", "rag", "research"]
     }
   ]
 }
