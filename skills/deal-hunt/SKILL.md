@@ -78,4 +78,46 @@ Returns JSON with results:
 
 When using `--queries`, results are deduplicated by URL (highest score kept, content merged).
 
-Claude analyzes the results to extract prices, compare deals, and recommend the best option.
+## Output Schema for Analysis
+
+After running the search, Claude should analyze results and structure findings as:
+
+```json
+{
+  "product": "Sony WH-1000XM5",
+  "best_deal": {
+    "price": 279.99,
+    "original_price": 399.99,
+    "discount": "30% off",
+    "retailer": "Amazon",
+    "url": "https://amazon.com/...",
+    "condition": "new",
+    "in_stock": true
+  },
+  "all_deals": [
+    {
+      "price": 279.99,
+      "retailer": "Amazon",
+      "url": "https://...",
+      "notes": "Prime shipping"
+    },
+    {
+      "price": 169.99,
+      "retailer": "eBay via Slickdeals",
+      "url": "https://...",
+      "notes": "Refurbished"
+    }
+  ],
+  "coupons": [
+    {
+      "code": "AUDIO10",
+      "discount": "10% off",
+      "retailer": "Best Buy",
+      "expires": "2026-01-31"
+    }
+  ],
+  "summary": "Best new price is $279.99 at Amazon (30% off). Refurbished available for $169.99."
+}
+```
+
+Claude extracts prices from content, compares deals, and presents the best options with purchase links.
