@@ -28,6 +28,8 @@ Add to `~/.claude/settings.json`:
 
 ## Quick Start
 
+> **Tip**: Research can take several minutes, especially with `--model pro`. Press **Ctrl+B** to run in the background and continue working while it completes.
+
 ### Basic Research (Polling Mode)
 
 ```bash
