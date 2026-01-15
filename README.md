@@ -95,7 +95,7 @@ To test a new skill or feature from a specific branch, first remove the existing
 ```
 /plugin marketplace remove tavily-plugins
 /plugin marketplace add tavily-ai/tavily-plugins#your-branch-name
-/plugin install tavily@tavily-plugins
+/plugin enable tavily@tavily-plugins
 ```
 
 This allows you to test changes before merging to main.
